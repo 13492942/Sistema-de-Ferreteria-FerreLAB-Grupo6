@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FerreLab - Soporte y Ayuda</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tahoma', 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #FFECE8; 
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 10%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo-contenedor {
+            display: flex;
+            align-items: center;
+            gap: 15px; 
+        }
+
+        .logo-img {
+            width: 80px;   
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .logo-texto {
+            font-size: 28px; 
+            font-weight: bold;
+        }
+
+        .logo-texto .negro { color: #000; }
+        .logo-texto .naranja { color: #F87A4C; } 
+
+        nav a {
+            text-decoration: none;
+            color: #666;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a.activo {
+            color: #F87A4C;
+        }
+
+        .contenedor {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        .introduccion {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .introduccion h1 {
+            font-size: 28px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .introduccion p {
+            color: #666;
+        }
+
+        .columnas {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            flex: 1;
+            min-width: 300px;
+        }
+
+        section h2 {
+            font-size: 20px;
+            color: #000;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #FFECE8;
+            padding-bottom: 10px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item h3 {
+            font-size: 16px;
+            color: #BD5732; 
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .grupo-campo {
+            margin-bottom: 15px;
+        }
+
+        .grupo-campo label {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #444;
+        }
+
+        .grupo-campo input, .grupo-campo textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #FFECE8;
+            background-color: #FFECE8;
+            border-radius: 5px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .grupo-campo input:focus, .grupo-campo textarea:focus {
+            border: 1px solid #F87A4C;
+            background-color: white;
+        }
+
+        .btn-enviar {
+            background-color: #F87A4C;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .btn-enviar:hover {
+            background-color: #BD5732;
+        }
+
+        footer {
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            color: #888;
+            margin-top: 40px;
+            border-top: 1px solid #FFECE8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-contenedor">
+            <img src="FerreLab__1_-removebg-preview.ico" alt="Logo FerreLab" class="logo-img">
+            <div class="logo-texto">
+                <span class="negro">Ferre</span><span class="naranja">Lab</span>
+            </div>
+        </div>
+        <nav>
+            <a href="#" class="activo">Soporte</a>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <section class="introduccion">
+            <h1>Centro de Ayuda y Soporte Técnico</h1>
+            <p>¿Tienes problemas para acceder o usar el sistema? Encuentra soluciones rápidas aquí o contáctanos.</p>
+        </section>
+
+        <div class="columnas">
+            <section class="seccion-faq">
+                <h2>Preguntas Frecuentes</h2>
+                
+                <div class="faq-item">
+                    <h3>¿Qué hago si olvidé mi contraseña?</h3>
+                    <p>Por seguridad, debes comunicarte directamente con el <strong>Manager</strong> o Administrador del sistema para que restablezca tus credenciales desde la base de datos.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Cómo cambio de rol al iniciar sesión?</h3>
+                    <p>En la ventana de acceso, abajo del campo de contraseña, encontrarás un menú desplegable (Combobox). Asegúrate de seleccionar "Manager" o "Empleado" según tus permisos antes de dar clic en Iniciar Sesión.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>El sistema no conecta con la base de datos</h3>
+                    <p>Verifica que el archivo de la base de datos SQLite no haya sido movido de la carpeta raíz de la aplicación.</p>
+                </div>
+            </section>
+
+            <section class="seccion-contacto">
+                <h2>Enviar un Reporte</h2>
+                <form action="#" method="GET" onsubmit="return false;">
+                    <div class="grupo-campo">
+                        <label for="nombre">Usuario:</label>
+                        <input type="text" id="nombre" placeholder="Ej. Pedro Gómez">
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="correo">Correo Electrónico:</label>
+                        <input type="email" id="correo" placeholder="usuario@correo.com">
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="mensaje">Descripción del problema:</label>
+                        <textarea id="mensaje" rows="5" placeholder="Escribe detalladamente qué error te aparece en pantalla..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar Reporte</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 FerreLab. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
